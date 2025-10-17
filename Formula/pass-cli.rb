@@ -5,12 +5,12 @@
 class PassCli < Formula
   desc "Secure, cross-platform CLI password and API key manager for developers"
   homepage "https://github.com/ari1110/pass-cli"
-  version "0.0.1"
+  version "0.0.0-workflow-test"
   license "MIT"
 
   on_macos do
-    url "https://github.com/ari1110/pass-cli/releases/download/v0.0.1/pass-cli_0.0.1_darwin_all.tar.gz"
-    sha256 "00f24279f5a2884d3da12f710601d21f5bbb3fbe4b69b18eb145fad5cea5249c"
+    url "https://github.com/ari1110/pass-cli/releases/download/v0.0.0-workflow-test/pass-cli_0.0.0-workflow-test_darwin_all.tar.gz"
+    sha256 "444c8b8a9ba3cdd7897c991f089789a8136a16aa555a5dfdb7427f999e166395"
 
     def install
       bin.install "pass-cli"
@@ -19,15 +19,15 @@ class PassCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ari1110/pass-cli/releases/download/v0.0.1/pass-cli_0.0.1_linux_x86_64.tar.gz"
-      sha256 "080ea6f5e3049d8faa36ed3f96890f7c1f9acc74376ac3a0983f8fd0be8da504"
+      url "https://github.com/ari1110/pass-cli/releases/download/v0.0.0-workflow-test/pass-cli_0.0.0-workflow-test_linux_x86_64.tar.gz"
+      sha256 "828f30122147a16b35ecf5d01db7e7509f5171016e0e5a93bbe516d26091cb56"
       def install
         bin.install "pass-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ari1110/pass-cli/releases/download/v0.0.1/pass-cli_0.0.1_linux_arm64.tar.gz"
-      sha256 "40eaf2f31d97a9cd5f96891784f0aed3bf63a9294e991b638de8ed2bcf0adc46"
+      url "https://github.com/ari1110/pass-cli/releases/download/v0.0.0-workflow-test/pass-cli_0.0.0-workflow-test_linux_arm64.tar.gz"
+      sha256 "752ecfb732ad33bc8ff75b01202817ea22217576f06b94efdd6cd9babd7ffe09"
       def install
         bin.install "pass-cli"
       end
