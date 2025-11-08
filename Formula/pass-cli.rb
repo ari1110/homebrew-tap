@@ -5,12 +5,12 @@
 class PassCli < Formula
   desc "Secure, cross-platform CLI password and API key manager for developers"
   homepage "https://github.com/ari1110/pass-cli"
-  version "0.8.74"
+  version "0.8.75"
   license "MIT"
 
   on_macos do
-    url "https://github.com/ari1110/pass-cli/releases/download/v0.8.74/pass-cli_0.8.74_darwin_all.tar.gz"
-    sha256 "3dcd155c4d2ff6b8dd9f4e0a6b101d13b13bda36edc3b7dbca94628b3c754e91"
+    url "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_darwin_all.tar.gz"
+    sha256 "7a0e2a0c1e12b9219faf1ddbc3a34c34239834733d02ba91d7328ef55301531a"
 
     def install
       bin.install "pass-cli"
@@ -19,15 +19,15 @@ class PassCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.74/pass-cli_0.8.74_linux_x86_64.tar.gz"
-      sha256 "598170eca1f293e4cad1858d0e7373eb22b3bcb6a2690ddb45dd06be983b3b69"
+      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_linux_x86_64.tar.gz"
+      sha256 "20fd8ac03ecdd6c2f5aae831f5367a88bec01356ab90e7bd42a9fc3f26977241"
       def install
         bin.install "pass-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.74/pass-cli_0.8.74_linux_arm64.tar.gz"
-      sha256 "45c6207e371cecf09b528b7c58c48c34b9c7ae157303b986522a480f07af10ce"
+      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_linux_arm64.tar.gz"
+      sha256 "7a25a69a934cd0e884b8619447a7b12dcc3a659da58c1fac3f67faf7c7f4d159"
       def install
         bin.install "pass-cli"
       end
