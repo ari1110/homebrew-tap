@@ -5,12 +5,12 @@
 class PassCli < Formula
   desc "Secure, cross-platform CLI password and API key manager for developers"
   homepage "https://github.com/ari1110/pass-cli"
-  version "0.8.75"
+  version "0.8.76"
   license "MIT"
 
   on_macos do
-    url "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_darwin_all.tar.gz"
-    sha256 "7a0e2a0c1e12b9219faf1ddbc3a34c34239834733d02ba91d7328ef55301531a"
+    url "https://github.com/ari1110/pass-cli/releases/download/v0.8.76/pass-cli_0.8.76_darwin_all.tar.gz"
+    sha256 "6b02337af9320662a030e89129fbd45db9be9946d969fbdaeff001243f821d08"
 
     def install
       bin.install "pass-cli"
@@ -19,15 +19,15 @@ class PassCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_linux_x86_64.tar.gz"
-      sha256 "20fd8ac03ecdd6c2f5aae831f5367a88bec01356ab90e7bd42a9fc3f26977241"
+      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.76/pass-cli_0.8.76_linux_x86_64.tar.gz"
+      sha256 "05e90ffa17f255a7f023ca934d52d09b9aeca5d44722ed89d5b7bb9b800183cf"
       def install
         bin.install "pass-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_linux_arm64.tar.gz"
-      sha256 "7a25a69a934cd0e884b8619447a7b12dcc3a659da58c1fac3f67faf7c7f4d159"
+      url "https://github.com/ari1110/pass-cli/releases/download/v0.8.76/pass-cli_0.8.76_linux_arm64.tar.gz"
+      sha256 "a79fdc2d6c34413295bdb7a11f6bd26ab31d94c4b07b3d47ac7ac31fd74a1f66"
       def install
         bin.install "pass-cli"
       end
@@ -36,8 +36,22 @@ class PassCli < Formula
 
   def caveats
     <<~EOS
-      To get started with Pass-CLI:
-        pass-cli --vault ~/.pass-cli.enc init
+      Pass-CLI: Secure password manager with TUI and CLI interfaces
+
+      First-time users: Run `pass-cli` (no arguments) for guided setup.
+
+      Quick start:
+        pass-cli          - Launch interactive TUI
+        pass-cli init     - Initialize vault manually
+        pass-cli doctor   - Run health checks
+
+      Features:
+        • Interactive TUI for visual management
+        • Keychain integration: pass-cli keychain enable
+        • Usage tracking and audit logging
+
+      Vault location: ~/.pass-cli/vault.enc
+      Complete guide: https://github.com/ari1110/pass-cli/blob/main/docs/GETTING_STARTED.md
     EOS
   end
 
